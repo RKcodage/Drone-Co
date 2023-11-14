@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    list-style: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    min-height: 100vh;
+}
+.header {
+    z-index: 0;
+    top: 0;
+    overflow: hidden;
+}
+.header-bg-container {
+    position: fixed;
+    width: 100%;
+    background: none;
+    transition: 0.5s ease;
+    z-index: 1000;
+    background-color: rgba(119, 119, 119, 0.6);
+}
+.header-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0px 20px;
+    align-items: center;
+    color: #333030;
+    padding: 20px 10px;
+}
+.logo p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-left: 220px;
+}
+a {
+    text-decoration: none;
+    color: #333030;
+    font-weight: 500;
+}
+h2 {
+    font-weight: lighter;
+    letter-spacing: 1px;
+    padding-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.gallery-description {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+}
+.gallery-description video {
+    width: 100%;
+    height: auto;
+}
+.gallery-presentation-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    height: auto;
+}
+.gallery-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.gallery-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 100px 8%;
+    background-color: #c9c9c9;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 30px;
+}
+.gallery img {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.gallery img:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333030;
+    min-height: 60px;
+    color: whitesmoke;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 20px;
+}
+.footer-logos {
+    display: flex;
+    justify-content: right;
+}
+.footer-logos i {
+    padding: 15px;
+}
+.footer-logos i:hover {
+    transform: scale(1.2);
+}

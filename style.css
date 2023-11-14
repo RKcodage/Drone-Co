@@ -1,0 +1,254 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(./fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    list-style: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+.header {
+    background: url(./img/DJI_0388.jpg) fixed center/cover; 
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+.header-bg-container {
+    z-index: 8000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background: none;
+    transition: 0.5s ease;
+}
+.header-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0px 20px;
+    align-items: center;
+    color: whitesmoke;
+    padding: 10px 10px;
+    width: 100%;
+    z-index: 1000;
+}
+.logo p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-left: 20px;
+}
+ul {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+.header-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    color: #333030;
+    padding: 200px 40px;
+}
+.movedown {
+    display: inline-block;
+    transform: translateY(0);
+    transition: transform 0.9s ease-out;
+    transition-delay: 0.4s;
+}
+.slide {
+    display: inline-block;
+    transform: translateX(0);
+    transition: transform 0.6s ease;
+    transition-delay: 0.6s;
+}
+h1:hover .movedown {
+        transform: translateY(45px);
+}
+h1:hover .slide {
+    transform: translateX(-310px);
+}
+.header-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 40px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.header-btn button {
+    font-size: 1.2rem;
+    font-weight: 300;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 50px 60px ;
+    border-radius: 40px;
+    border-style: none;
+    transition: 0.3s ease;
+}
+.header-btn button i:hover {
+    color: whitesmoke;
+    transform: scale(1.4);
+}
+.header-btn button i {
+    color: #333030;
+}
+.presentation {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+    color: #333030;
+    z-index: -1;
+    position: relative;
+    background-color: rgba(195, 195, 192, 0.543);
+    padding: 10px 0px 10px 0px;
+}
+.presentation-title {
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    padding: 10px 10px;
+    margin: 0 20px;
+    z-index: 1;
+    color: #333030;
+    border-bottom: 0.5px inset black;
+}
+.presentation-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 2;
+    grid-column: 1;
+    padding: 10px 10px;
+    margin: 0 20px;
+}
+.presentation-pic img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.9;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.presentation-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row: 2;
+    grid-column: 2;
+    padding: 10px 10px;
+    margin: 10px 30px 10px 10px;
+    background-color: #a3a1a1;
+}
+.presentation-text p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    width: 80%;
+    height: 100%;
+    line-height: 1.8;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 1.7rem;
+}
+.quotes1 p, .quotes2 p {
+    font-size: 5rem;
+}
+.quotes1 {
+    display: flex;
+    margin-right: auto;
+    padding-left: 40px;
+}
+.quotes2 {
+    display: flex;
+    margin-left: auto;
+    padding-right: 40px;
+}
+.gallery {
+    background: url(./img/DJI_0585.JPG) fixed center/cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery a {
+    font-weight: 700;
+    color: whitesmoke;
+}
+.gallery button {
+    background: transparent;
+    display: flex;
+    padding: 20px;
+    border: 1px solid whitesmoke;
+    font-size: 1.3rem;
+    font-weight: 500 ;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease;
+} 
+.gallery button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background:#33303063; /* Couleur de fond au survol */
+    transition: left 0.5s ease; /* Transition pour un effet en douceur */
+    z-index: -1;
+}
+.gallery button:hover::before {
+    left: 0;
+}
+.gallery button:hover {
+    transition: 0.5s ease;
+    transform: scale(1.2);
+    border: 1.5px solid whitesmoke;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333030;
+    min-height: 60px;
+    color: whitesmoke;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 20px;
+}
+.footer-logos {
+    display: flex;
+    justify-content: right;
+}
+.footer-logos i {
+    padding: 15px;
+}
+.footer-logos i:hover {
+    transform: scale(1.2);
+}
